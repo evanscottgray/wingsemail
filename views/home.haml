@@ -1,0 +1,24 @@
+.container{style: "padding: 15px 15px 0px;"}
+  .row
+    .page-header
+      %h1
+        %small
+          Was your address leaked?
+  .row
+    .col-md-8.col-md-offset-2
+      .well
+        .span.text-center
+        %form{id:"form", method: "POST", class: "form-inline"}
+          %input{class: "form-control", type: "text", placeholder: "email@wow.com (then press enter!)", name:"email", id:"email"}
+      .alert.alert-warning.alert-dismissible.owned{style: "display: none;"}
+        %button.btn.btn-info.close{type: "button"} &times;
+        .text-center.response
+      .alert.alert-success.alert-dismissible.not-owned{style: "display: none;"}
+        %button.btn.btn-info.close{type: "button"} &times;
+        .text-center.response
+      .alert.alert-danger.alert-dismissible.error{style: "display: none;"}
+        %button.btn.btn-info.close{type: "button"} &times;
+        .span.text-center.response
+      .alert.alert-info.text-center.working{style: "display: none;"}
+        .span{style: 'padding-bottom: 10px;'} Working...
+        %img{src: "/images/ajax-loader.gif", class: "img-responsive", style: "margin: 0 auto;"}

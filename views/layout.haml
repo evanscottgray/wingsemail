@@ -1,0 +1,19 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title WingsEmail
+    %link{:href => "/css/app.min.css", :rel => "stylesheet"}/
+  %body
+    #wrap
+      .navbar.navbar-default.navbar-static-top
+        .navbar-inner
+          .navbar-brand{:href => "/"}
+            .h1 WingsEmail
+      =yield
+    #footer
+      .container
+        %p.text-muted.credit
+          It didn't have to be like this. :c
+%script{src: "//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"}
+%script{src: "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"}
+%script{src: "/js/application/page.min.js"}
