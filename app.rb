@@ -5,15 +5,9 @@ require 'json'
 require './lib/is_pwnd.rb'
 
 configure do
-  # Don't log them. We'll do that ourself
-  set :dump_errors, false
-
-  # Don't capture any errors. Throw them up the stack
-  set :raise_errors, false
-
-  # Disable internal middleware for presenting errors
-  # as useful HTML pages
-  set :show_exceptions, false
+   set :dump_errors, false
+   set :raise_errors, false
+   set :show_exceptions, false
 end
 
 EMAIL_LIST = JSON.parse(File.read('/tmp/config.json'))
