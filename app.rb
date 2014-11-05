@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'haml'
 require 'json'
+require 'newrelic_rpm'
 
 require './lib/is_pwnd.rb'
 
